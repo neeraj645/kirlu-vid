@@ -14,37 +14,37 @@ const About: React.FC = () => {
             
             <div className="order-2 md:order-1">
               <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-600">Yashwant </span>.
+                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-600">Yashwant Rao</span>.
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed mb-8">
-               Hey everyone! Welcome to my channel, where I share exciting, informative, 
-               and entertaining videos every week. From helpful tips and real-life experiences 
-               to creative content and fun challenges, there’s always something new to enjoy. 
-               Make sure to subscribe and join the journey!
-                </p>
+               Hey everyone! Welcome to my channel, where I share exciting, 
+               informative, and entertaining videos every week. From helpful 
+               tips and real-life experiences to creative content and fun challenges,
+                there’s always something new to enjoy. Make sure to subscribe and join the journey!
+               </p>
               
               <div className="grid grid-cols-3 gap-8">
                 <div>
                   <div className="flex items-center gap-2 text-pink-500 mb-2">
                     <Users size={20} />
                   </div>
-                  <div className="text-2xl font-bold text-slate-900">90k+</div>
+                  <div className="text-2xl font-bold text-slate-900">15k+</div>
                   <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Subscribers</div>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 text-indigo-500 mb-2">
                     <Award size={20} />
                   </div>
-                  <div className="text-2xl font-bold text-slate-900">100+</div>
+                  <div className="text-2xl font-bold text-slate-900">20+</div>
                   <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Videos</div>
                 </div>
-                <div>
+                {/* <div>
                   <div className="flex items-center gap-2 text-pink-500 mb-2">
                     <Coffee size={20} />
                   </div>
-                  <div className="text-2xl font-bold text-slate-900">50+</div>
-                  <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Prompts</div>
-                </div>
+                  <div className="text-2xl font-bold text-slate-900">500+</div>
+                  <div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Tutorials</div>
+                </div> */}
               </div>
             </div>
 
@@ -67,8 +67,8 @@ const About: React.FC = () => {
                      <Award size={20} />
                    </div>
                    <div>
-                     <p className="text-xs text-slate-500 font-medium">Instructor of the Year</p>
-                     <p className="text-sm font-bold text-slate-900">2023 Winner</p>
+                     <p className="text-xs text-slate-500 font-medium">TCS ILP extended</p>
+                     <p className="text-sm font-bold text-slate-900">Associate</p>
                    </div>
                 </div>
               </div>

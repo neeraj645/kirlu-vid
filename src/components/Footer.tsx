@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
                <div className="p-2 bg-indigo-600 rounded-lg shadow-md shadow-indigo-200">
                  <BookOpen size={20} className="text-white" />
                </div>
-               <span className="text-xl font-bold tracking-tight text-slate-900">Lumina.</span>
+               <span className="text-xl font-bold tracking-tight text-slate-900">Kirlu Vids</span>
              </div>
              <p className="text-slate-600 text-sm leading-relaxed">
-               Empowering the next generation of creators with high-quality, accessible education in design and code.
+                Kirlu Vids is your go-to YouTube channel for creative and engaging video content.
              </p>
              <div className="flex gap-4">
                {[Twitter, Instagram, Linkedin, Github].map((Icon, i) => (
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-slate-900 font-bold mb-6">Explore</h4>
             <ul className="space-y-4 text-sm text-slate-600">
-              {['All Courses', 'Bundles', 'Mentorship', 'Community', 'Blog'].map(item => (
+              {['All Courses', 'Youtube', 'Blog'].map(item => (
                 <li key={item}><a href="#" className="hover:text-indigo-600 transition-colors font-medium">{item}</a></li>
               ))}
             </ul>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-slate-900 font-bold mb-6">Company</h4>
             <ul className="space-y-4 text-sm text-slate-600">
-              {['About Us', 'Careers', 'Become an Instructor', 'Privacy Policy', 'Terms of Service'].map(item => (
+              {['About Us','Privacy Policy', 'Terms of Service'].map(item => (
                 <li key={item}><a href="#" className="hover:text-indigo-600 transition-colors font-medium">{item}</a></li>
               ))}
             </ul>
@@ -53,11 +53,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-slate-600">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-pink-500 mt-0.5" />
-                <span>123 Electronic City<br/>Bangalore, KA 560100</span>
+                <span>TCS Electronic city<br/>Bangalore 560100</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-pink-500" />
-                <span>yashwant@gmail.com</span>
+                <span>kirluvid@example.com</span>
               </li>
             </ul>
           </div>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-xs font-medium">
-            © {new Date().getFullYear()} Kirlu Vid. All rights reserved.
+            © {new Date().getFullYear()} Kirlu vid. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-slate-500 font-medium">
             <a href="#" className="hover:text-slate-800">Privacy</a>

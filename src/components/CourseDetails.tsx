@@ -1,15 +1,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Clock, User, CheckCircle, PlayCircle, ArrowLeft, Shield, Globe, Award, MessageCircle, ThumbsUp } from 'lucide-react';
-import { Course } from './Courses';
+import { Star, Clock, CheckCircle, PlayCircle, ArrowLeft, Shield, Globe, Award, MessageCircle, ThumbsUp, Zap } from 'lucide-react';
+import type { Course } from './Courses';
 
 interface CourseDetailsProps {
   course: Course;
   onBack: () => void;
+  onEnroll: () => void;
 }
 
-const CourseDetails: React.FC<CourseDetailsProps> = ({ course, onBack }) => {
+const CourseDetails: React.FC<CourseDetailsProps> = ({ course, onBack, onEnroll }) => {
   return (
     <div className="pt-24 pb-16 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
@@ -24,7 +25,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ course, onBack }) => {
           <div className="p-2 rounded-full bg-white border border-slate-200 group-hover:border-indigo-200 group-hover:bg-indigo-50 transition-colors">
             <ArrowLeft size={16} />
           </div>
-          Back to Courses
+          Back to Home
         </motion.button>
 
         <div className="grid lg:grid-cols-3 gap-12">
@@ -187,8 +188,12 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ course, onBack }) => {
                     <span className="text-xs font-bold text-green-600 bg-green-100 px-2 py-1 rounded-full mb-2">50% OFF</span>
                   </div>
 
-                  <button className="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold shadow-lg shadow-slate-300 transition-all hover:scale-[1.02] mb-3">
+                  <button 
+                    onClick={onEnroll}
+                    className="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold shadow-lg shadow-slate-300 transition-all hover:scale-[1.02] mb-3 flex items-center justify-center gap-2"
+                  >
                     Enroll Now
+                    <Zap size={18} />
                   </button>
                   <p className="text-center text-xs text-slate-400 mb-6">30-Day Money-Back Guarantee</p>
 

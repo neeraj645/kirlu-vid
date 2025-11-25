@@ -1,8 +1,13 @@
+
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, PlayCircle, Zap } from 'lucide-react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onOrderClick: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onOrderClick }) => {
   const ref = useRef(null);
   const { scrollY } = useScroll();
   
@@ -23,33 +28,42 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-10"
         >
-          {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 border border-pink-200 text-pink-600 text-xs font-bold mb-6 tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 border border-pink-200 text-pink-600 text-xs font-bold mb-6 tracking-wide uppercase">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
             </span>
-            New Session Available
-          </div> */}
+            New AI video prompts Available
+          </div>
           
           <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1] mb-6">
-            Create your <br />
+            Refine your <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-600">
-              Digital Craft.
+              Video Craft.
             </span>
           </h1>
           
           <p className="text-lg text-slate-600 mb-8 max-w-md leading-relaxed font-medium">
-            Create your own AI videos and content in minutes with Kirlu Vid's powerful prompt.
-            </p>
+            Minimalist theory meets practical application. Elevate your skills with premium courses designed for the modern creator.
+          </p>
           
-          <div className="flex flex-wrap items-center gap-4">
-            <button className="group px-8 py-4 bg-slate-900 text-white rounded-full font-semibold flex items-center gap-2 hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 hover:shadow-2xl hover:shadow-slate-300">
-              Get Prompt
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 rounded-full border border-slate-200 bg-white text-slate-600 font-semibold flex items-center gap-2 hover:border-pink-300 hover:text-pink-600 transition-colors shadow-sm">
-              {/* <PlayCircle size={18} /> */}
-              Want Demo
+          <div className="flex items-center gap-4">
+            <button 
+              onClick={onOrderClick}
+              className="group relative pl-8 pr-2 py-2 bg-slate-900 text-white rounded-full font-semibold flex items-center gap-4 hover:bg-slate-800 transition-all shadow-2xl shadow-indigo-900/20 hover:shadow-indigo-900/40 hover:-translate-y-1"
+            >
+              <span>Get All Access</span>
+              <span className="flex items-center gap-3 bg-white/10 rounded-full px-4 py-3 border border-white/5">
+                <span className="flex flex-col items-end leading-none">
+                  {/* rupee sign */}
+                  
+                  <span className="text-[10px] text-slate-400 line-through decoration-slate-400/50">Regular ₹249</span>
+                  <span className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-indigo-300">Offer ₹99</span>
+                </span>
+                <span className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-900 group-hover:scale-110 transition-transform">
+                  <ArrowRight size={16} className="group-hover:-rotate-45 transition-transform duration-300" />
+                </span>
+              </span>
             </button>
           </div>
 
@@ -59,7 +73,7 @@ const Hero: React.FC = () => {
                  <img key={i} src={`https://picsum.photos/50/50?random=${i}`} alt="User" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" />
                ))}
              </div>
-             <p>Joined by 10,000+ creators</p>
+             <p>Joined by 1000+ happy users </p>
           </div>
         </motion.div>
 
@@ -88,13 +102,13 @@ const Hero: React.FC = () => {
             />
             
             {/* Internal Label */}
-            {/* <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-slate-900 shadow-lg z-10">
-              #1 Trending Course
-            </div> */}
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold text-slate-900 shadow-lg z-10">
+              #1 Trending Prompts package
+            </div>
           </div>
 
           {/* Floating Element - Glass Card */}
-          {/* <motion.div 
+          <motion.div 
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="absolute bottom-10 -left-6 md:left-10 p-5 bg-white/80 backdrop-blur-xl border border-white/60 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] max-w-[200px] z-20"
@@ -105,14 +119,14 @@ const Hero: React.FC = () => {
               </div>
               <div>
                 <p className="text-xs text-slate-500 font-semibold uppercase">Fast Track</p>
-                <p className="text-sm font-bold text-slate-800">UI/UX Design</p>
+                <p className="text-sm font-bold text-slate-800">Video Craft</p>
               </div>
             </div>
             <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-              <div className="w-[70%] h-full bg-gradient-to-r from-pink-500 to-indigo-500"></div>
+              <div className="w-[96%] h-full bg-gradient-to-r from-pink-500 to-indigo-500"></div>
             </div>
-            <p className="text-[10px] text-slate-400 mt-2 text-right">70% Completed</p>
-          </motion.div> */}
+            <p className="text-[10px] text-slate-400 mt-2 text-right">96% Completed</p>
+          </motion.div>
 
           {/* Abstract Decor Behind */}
           <div className="absolute top-10 -right-10 w-64 h-64 bg-pink-300/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
